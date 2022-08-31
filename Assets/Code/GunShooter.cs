@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class GunShooter : MonoBehaviour
@@ -7,10 +6,6 @@ public class GunShooter : MonoBehaviour
     [SerializeField] private GameObject _bulletPrefab;
     [SerializeField] private Transform _shotTransform;
     [SerializeField] private float _shootPower;
-
-    private void Awake()
-    {
-    }
 
     public void Shoot()
     {

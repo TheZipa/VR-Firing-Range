@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 445380506}
   m_Layer: 6
-  m_Name: Attach Location
+  m_Name: Right_Attach Location
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -104,8 +104,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4878850369403266}
   - component: {fileID: 7528954044100860204}
-  - component: {fileID: 4023367106166075776}
   - component: {fileID: 1198491380350027411}
+  - component: {fileID: 119319213222831829}
   m_Layer: 6
   m_Name: M1911 Handgun Base
   m_TagString: Untagged
@@ -129,6 +129,7 @@ Transform:
   - {fileID: 4381382391936632}
   - {fileID: 6071559261934024155}
   - {fileID: 445380506}
+  - {fileID: 4583078348257260625}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -148,7 +149,7 @@ Rigidbody:
   m_Interpolate: 2
   m_Constraints: 0
   m_CollisionDetection: 2
---- !u!114 &4023367106166075776
+--- !u!114 &1198491380350027411
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -157,7 +158,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1690370004738036}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
+  m_Script: {fileID: 11500000, guid: 3075d918fe237e54b8042566114e306d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 1792479375520978528}
+--- !u!114 &119319213222831829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1690370004738036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4360baa9488c20438dc25c7cb53e70d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -227,7 +241,7 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
-  m_AttachTransform: {fileID: 445380506}
+  m_AttachTransform: {fileID: 0}
   m_UseDynamicAttach: 0
   m_MatchAttachPosition: 1
   m_MatchAttachRotation: 1
@@ -268,19 +282,8 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
---- !u!114 &1198491380350027411
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1690370004738036}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3075d918fe237e54b8042566114e306d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _animator: {fileID: 1792479375520978528}
+  _leftAttachTransform: {fileID: 4583078348257260625}
+  _rightAttachTransform: {fileID: 445380506}
 --- !u!1 &2058722250136529284
 GameObject:
   m_ObjectHideFlags: 0
@@ -313,6 +316,37 @@ Transform:
   m_Father: {fileID: 4878850369403266}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6482303578341034752
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4583078348257260625}
+  m_Layer: 6
+  m_Name: Left_Attach Location
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4583078348257260625
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6482303578341034752}
+  m_LocalRotation: {x: -0.08759041, y: 0, z: 0, w: 0.9961566}
+  m_LocalPosition: {x: 0.0303, y: 0.0668, z: 0.0469}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4878850369403266}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: -10.05, y: 0, z: 0}
 --- !u!1001 &14471850352375090
 PrefabInstance:
   m_ObjectHideFlags: 0
