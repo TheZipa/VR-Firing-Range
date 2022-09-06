@@ -11,10 +11,24 @@ namespace Code
         [SerializeField] private XRDirectInteractor _rightDirectGrab;
         [SerializeField] private XRDirectInteractor _leftDirectGrab;
 
-        private void Update()
+        private void Awake()
         {
-            _leftGrabRay.SetActive(_leftDirectGrab.interactablesSelected.Count == 0);
-            _rightGrabRay.SetActive(_rightDirectGrab.interactablesSelected.Count == 0);
+            _leftDirectGrab.selectEntered.AddListener(DisableLeftGrabRay);
+            _leftDirectGrab.selectExited.AddListener(EnableLeftGrabRay);
+            _rightDirectGrab.selectEntered.AddListener(DisableRightGrabRay);
+            _rightDirectGrab.selectExited.AddListener(EnableRightGrabRay);
         }
+
+        private void DisableLeftGrabRay(SelectEnterEventArgs args) =>
+            _leftGrabRay.SetActive(false);
+
+        private void DisableRightGrabRay(SelectEnterEventArgs args) =>
+            _rightGrabRay.SetActive(false);
+
+        private void EnableLeftGrabRay(SelectExitEventArgs args) =>
+            _leftGrabRay.SetActive(true);
+
+        private void EnableRightGrabRay(SelectExitEventArgs args) =>
+            _rightGrabRay.SetActive(true);
     }
 }
