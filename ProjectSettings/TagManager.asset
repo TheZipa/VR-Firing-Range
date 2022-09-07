@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Right Hand
   - Left Hand
+  - Magazine
   layers:
   - Default
   - TransparentFX
@@ -14,8 +15,8 @@ TagManager:
   - Water
   - UI
   - Interactable
-  - 
-  - 
+  - Gun
+  - Magazine
   - 
   - 
   - 

@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Hierarchy
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 125
+  controlID: 23
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 126
+  controlID: 132
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 127
+  controlID: 133
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -189,8 +189,8 @@ MonoBehaviour:
     y: 0
     width: 269
     height: 580
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 24
+  controlID: 68
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -268,8 +268,8 @@ MonoBehaviour:
     y: 0
     width: 947
     height: 367
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -453,20 +453,20 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: d6cafeff
-      m_LastClickedID: -79146
-      m_ExpandedIDs: daa3ffff28fbffff3a6f0000a66f0000
+      m_SelectedIDs: 7edeffff
+      m_LastClickedID: -8578
+      m_ExpandedIDs: a2f8fffff8f8ffff3afaffff44faffff28fbffff966f0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: BulletHoleDecal(Clone)
-        m_OriginalName: BulletHoleDecal(Clone)
+        m_Name: M1911 Magazine_Steel
+        m_OriginalName: M1911 Magazine_Steel
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -94080
+        m_UserData: -1890
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
         m_OriginalEventType: 0
@@ -705,9 +705,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 2.8897073, y: 0.23652056, z: 8.276812}
+    m_Target: {x: 7.55515, y: 1.1959323, z: -1.9123013}
     speed: 2
-    m_Value: {x: 2.8897073, y: 0.23652056, z: 8.276812}
+    m_Value: {x: 7.55515, y: 1.1959323, z: -1.9123013}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -754,13 +754,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.30843246, y: 0.6259941, z: -0.2918944, w: -0.654934}
+    m_Target: {x: 0.2390207, y: -0.6382901, z: 0.2153065, w: 0.70021}
     speed: 2
-    m_Value: {x: -0.3087979, y: 0.6261792, z: -0.29313093, w: -0.65315986}
+    m_Value: {x: 0.23887789, y: -0.63790876, z: 0.21517786, w: 0.6997916}
   m_Size:
-    m_Target: 0.06495191
+    m_Target: 0.17978372
     speed: 2
-    m_Value: 0.06495191
+    m_Value: 0.17978372
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -946,7 +946,7 @@ MonoBehaviour:
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 46104
+  m_LastSelectedObjectID: -8578
 --- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -988,8 +988,7 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SkipHidden: 0
     m_SearchArea: 1
-    m_Folders:
-    - Assets/GunGame/Resources/Prefabs
+    m_Folders: []
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 0
@@ -1003,7 +1002,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 60}
     m_SelectedIDs: 84750000
     m_LastClickedID: 30084
-    m_ExpandedIDs: 000000008e710000227400002474000026740000287400002a7400002c7400002e74000030740000327400003474000036740000387400003a7400003c7400003e74000040740000427400004474000046740000
+    m_ExpandedIDs: 0000000096700000e8730000ea730000ec730000ee730000f0730000f2730000f4730000f6730000f8730000fa730000fc730000fe73000000740000027400000474000006740000087400000a7400000c7400000e7400001074000012740000147400001674000018740000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1028,21 +1027,21 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 132}
+    scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff000000008e710000227400002474000026740000287400002a7400002c7400002e74000030740000327400003474000036740000387400003a7400003c740000407400004274000044740000467400009a740000b87800008c79000090790000248300002683000050830000
+    m_ExpandedIDs: ffffffff0000000096700000e8730000ea730000ec730000ee730000f0730000f2730000f4730000f6730000f8730000fa730000fc730000fe73000000740000027400000474000006740000087400000a7400000c7400000e7400001074000012740000147400001674000018740000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 45ACP Bullet_Casing
-      m_OriginalName: 45ACP Bullet_Casing
+      m_Name: XRSocketInteractorTag
+      m_OriginalName: XRSocketInteractorTag
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 33556
+      m_UserData: 30960
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
