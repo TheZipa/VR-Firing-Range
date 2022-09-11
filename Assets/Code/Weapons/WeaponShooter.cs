@@ -10,7 +10,8 @@ namespace Code.Weapons
         [SerializeField] private Transform _parentDecalTransform;
         [SerializeField] private GameObject _hitDecal;
         [SerializeField] private WeaponMuzzleFlash _muzzleFlash;
-        
+
+        [SerializeField] private float _hitForce = 2.5f;
         [SerializeField] private float _decalRemoveDuration = 10f;
         [SerializeField] private float _maxHitDistance = 125f;
 
@@ -28,16 +29,20 @@ namespace Code.Weapons
         {
             Ray ray = new Ray(_shotTransform.position, _shotTransform.forward);
             if (Physics.Raycast(ray, out RaycastHit hit, _maxHitDistance))
-                SpawnDecalAtPoint(hit.point, hit.normal);
-            
+            {
+                SpawnDecalAtPoint(hit.point, hit.normal, hit.transform);
+                hit.rigidbody?.AddForce(hit.normal * _hitForce * -1, ForceMode.Impulse);
+            }
+
             _muzzleFlash.Show();
         }
 
-        private void SpawnDecalAtPoint(Vector3 point, Vector3 normal)
+        private void SpawnDecalAtPoint(Vector3 point, Vector3 normal, Transform parent)
         {
             GameObject decal = _decalPool.Get();
             decal.transform.position = point;
             decal.transform.forward = normal;
+            decal.transform.SetParent(parent);
             StartCoroutine(RemoveDecal(decal));
         }
 

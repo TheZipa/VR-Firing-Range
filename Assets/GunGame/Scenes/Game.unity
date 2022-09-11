@@ -12811,7 +12811,7 @@ PrefabInstance:
     - target: {fileID: 1611173682025786140, guid: 6b82e8581132bc747ae5ad3422ec981c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 1611173682025786140, guid: 6b82e8581132bc747ae5ad3422ec981c,
         type: 3}
@@ -13303,7 +13303,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3496521478692088027}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Ejection_Location
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13806,7 +13806,7 @@ GameObject:
   - component: {fileID: 5382352448037002852}
   - component: {fileID: 5382352448034135620}
   - component: {fileID: 5382352448035101828}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13830,6 +13830,7 @@ MonoBehaviour:
   _hitDecal: {fileID: 6813005368604925060, guid: 38b2041416b95e74e8da253a0b845ca1,
     type: 3}
   _muzzleFlash: {fileID: 3498676547561143714}
+  _hitForce: 5
   _decalRemoveDuration: 10
   _maxHitDistance: 125
 --- !u!1 &5382352448037093958
@@ -13997,10 +13998,34 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8494313903662132068}
+        m_TargetAssemblyTypeName: Code.CollectableBlink, Assembly-CSharp
+        m_MethodName: SetDefault
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8494313903662132068}
+        m_TargetAssemblyTypeName: Code.CollectableBlink, Assembly-CSharp
+        m_MethodName: SetBlink
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_Activated:
     m_PersistentCalls:
       m_Calls: []
@@ -14103,6 +14128,7 @@ GameObject:
   - component: {fileID: 8494313903661001122}
   - component: {fileID: 8494313903662132066}
   - component: {fileID: 8494313903662132067}
+  - component: {fileID: 8494313903662132068}
   m_Layer: 8
   m_Name: M1911 Magazine
   m_TagString: Untagged
@@ -14153,7 +14179,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8ca21f01f2c5c9c4aa7e714faf94251e, type: 2}
+  - {fileID: 2100000, guid: 2df106884a20b4b92b09167e8d696351, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14189,3 +14215,17 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 40ea87bfb6dc64349a6b3363f1955b6a, type: 3}
+--- !u!114 &8494313903662132068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8494313903660201378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1348877bddbb95749b9109abdad853f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _blinkMaterial: {fileID: 2100000, guid: 2df106884a20b4b92b09167e8d696351, type: 2}
+  _defaultMaterial: {fileID: 2100000, guid: 8ca21f01f2c5c9c4aa7e714faf94251e, type: 2}
