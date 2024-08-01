@@ -27,6 +27,7 @@ namespace FiringRange.Code.Infrastructure.StateMachine.States
         public void Enter()
         {
             _saveLoad.Load();
+            _gameStateMachine.Enter<LoadGameState>();
         }
 
         public void Exit()

@@ -5,7 +5,8 @@ namespace FiringRange.Code.Services.StaticData
 {
     public class StaticData : IStaticData
     {
-        public GameSettings GameSettings { get; private set; }
+        public FiringRangeConfig FiringRangeConfig { get; private set; }
+        public LocationData LocationData { get; private set; }
 
         private readonly IStaticDataProvider _staticDataProvider;
 
@@ -17,7 +18,8 @@ namespace FiringRange.Code.Services.StaticData
 
         public void LoadStaticData()
         {
-            GameSettings = _staticDataProvider.LoadGameConfiguration();
+            FiringRangeConfig = _staticDataProvider.LoadFiringRangeConfig();
+            LocationData = _staticDataProvider.LoadLocationData();
         }
     }
 }

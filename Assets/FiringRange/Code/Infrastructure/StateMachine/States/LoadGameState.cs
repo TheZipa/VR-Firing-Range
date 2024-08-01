@@ -10,20 +10,20 @@ namespace FiringRange.Code.Infrastructure.StateMachine.States
     public class LoadGameState : IState
     {
         private readonly IGameStateMachine _gameStateMachine;
-        private readonly IGameFactory _gameFactory;
         private readonly IEntityContainer _entityContainer;
+        private readonly IGameFactory _gameFactory;
         private readonly ISceneLoader _sceneLoader;
         private readonly ILoadingCurtain _loadingCurtain;
-        private const string GameScene = "Game";
+        private const string GameScene = "FiringRange";
 
         public LoadGameState(IGameStateMachine gameStateMachine, IGameFactory gameFactory,
             IEntityContainer entityContainer, ISceneLoader sceneLoader, ILoadingCurtain loadingCurtain)
         {
             _gameStateMachine = gameStateMachine;
-            _gameFactory = gameFactory;
             _entityContainer = entityContainer;
-            _sceneLoader = sceneLoader;
             _loadingCurtain = loadingCurtain;
+            _gameFactory = gameFactory;
+            _sceneLoader = sceneLoader;
         }
 
         public void Enter()
@@ -44,8 +44,11 @@ namespace FiringRange.Code.Infrastructure.StateMachine.States
         private async UniTask InitializeGameplay()
         {
             await _gameFactory.WarmUp();
+            await _gameFactory.CreateXRPlayer();
+            _gameFactory.CreateDecalPlacement();
+            await _gameFactory.CreatePistol();
         }
 
-        private void FinishLoad() => _gameStateMachine.Enter<GameplayState>();
+        private void FinishLoad() => _gameStateMachine.Enter<FiringRangeState>();
     }
 }

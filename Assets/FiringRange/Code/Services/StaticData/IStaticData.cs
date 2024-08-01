@@ -4,7 +4,8 @@ namespace FiringRange.Code.Services.StaticData
 {
     public interface IStaticData : IGlobalService
     {
-        GameSettings GameSettings { get; }
+        FiringRangeConfig FiringRangeConfig { get; }
+        LocationData LocationData { get; }
         void LoadStaticData();
     }
 }

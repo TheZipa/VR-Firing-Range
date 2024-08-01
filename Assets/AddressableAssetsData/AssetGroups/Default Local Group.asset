@@ -17,22 +17,26 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 54d40f61bf72949dd9b6a81678a953be
   m_SerializeEntries:
-  - m_GUID: 17f494cd2bfab493fa28ae48dd62b1a8
-    m_Address: RootCanvas
+  - m_GUID: 6b82e8581132bc747ae5ad3422ec981c
+    m_Address: XRPlayer
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: f8fd6e72c4dbf4652a62652bc8cb4032
-    m_Address: MainMenu
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 38b2041416b95e74e8da253a0b845ca1
+    m_Address: BulletHoleDecal
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 66008b1a966734d69bfc2d1e89bae640
-    m_Address: TopPanel
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4cb20e8abae957146a8b78e670d3fe74
+    m_Address: WeaponCase
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: f025959d70da1ef45b4987c479d9bd71
-    m_Address: SettingsPanel
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2e3da402d29603647bae82e176488bdc
+    m_Address: Pistol
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: bf9fea49eaefb44798f1a24471e47851, type: 2}
   m_SchemaSet:

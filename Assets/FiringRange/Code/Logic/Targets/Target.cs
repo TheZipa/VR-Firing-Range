@@ -6,10 +6,7 @@ namespace FiringRange.Code.Logic.Targets
     {
         [SerializeField] protected Hit.Hit _hitBehaviour;
 
-        private void Start() // Я дебажу нормально не пиздеть
-        {
-            Enable();
-        }
+        private void Start() => Enable();
 
         public abstract void Enable();
 
