@@ -1,14 +1,19 @@
+using System;
 using Cysharp.Threading.Tasks;
+using FiringRange.Code.Logic.Common;
 using FiringRange.Code.Logic.Targets;
 using FiringRange.Code.Logic.Weapons;
+using FiringRange.Code.Logic.Weapons.Case;
+using FiringRange.Code.Logic.Weapons.Decal;
 using FiringRange.Code.Logic.Weapons.Pistol;
 using FiringRange.Code.Services.Assets;
 using FiringRange.Code.Services.EntityContainer;
 using FiringRange.Code.Services.SaveLoad;
 using FiringRange.Code.Services.StaticData;
-using FiringRange.Code.XRInput;
+using FiringRange.Code.Services.Timer;
 using UnityEngine;
 using UnityEngine.Pool;
+using Object = UnityEngine.Object;
 
 namespace FiringRange.Code.Services.Factories.GameFactory
 {
@@ -16,12 +21,14 @@ namespace FiringRange.Code.Services.Factories.GameFactory
     {
         private readonly IStaticData _staticData;
         private readonly ISaveLoad _saveLoad;
+        private readonly ITimer _timer;
 
-        public GameFactory(IAssets assets, IEntityContainer entityContainer,
+        public GameFactory(IAssets assets, IEntityContainer entityContainer, ITimer timer,
             IStaticData staticData, ISaveLoad saveLoad) : base(assets, entityContainer)
         {
             _staticData = staticData;
             _saveLoad = saveLoad;
+            _timer = timer;
         }
 
         public async UniTask WarmUp()
@@ -29,20 +36,30 @@ namespace FiringRange.Code.Services.Factories.GameFactory
             await _assets.Load<GameObject>(nameof(WeaponCase));
             await _assets.Load<GameObject>(nameof(Pistol));
             //await _assets.Load<GameObject>(nameof(StrafeTarget));
-            await _assets.Load<GameObject>(nameof(XRPlayer));
+            await _assets.Load<GameObject>(nameof(XRPlayer.XRPlayer));
             await _assets.Load<GameObject>(nameof(BulletHoleDecal));
+            await _assets.Load<GameObject>(nameof(GameStatsView));
         }
 
-        public async UniTask<XRPlayer> CreateXRPlayer() => 
-            await InstantiateAsRegistered<XRPlayer>(_staticData.LocationData.PlayerSpawnLocation);
+        public async UniTask<XRPlayer.XRPlayer> CreateXRPlayer() => 
+            await InstantiateAsRegistered<XRPlayer.XRPlayer>(_staticData.LocationData.PlayerSpawnLocation);
 
         public async UniTask<Pistol> CreatePistol()
         {
             Pistol pistol = await InstantiateAsRegistered<Pistol>(_staticData.LocationData.PistolSpawnLocation);
-            pistol.Construct(_entityContainer.GetEntity<XRPlayer>().InteractionManager);
+            pistol.Construct(_entityContainer.GetEntity<XRPlayer.XRPlayer>().InteractionManager);
             pistol.Casing.Construct(CreatePool<WeaponCase>(40));
             pistol.Shooter.Construct(_entityContainer.GetEntity<DecalPlacement>());
             return pistol;
+        }
+
+        public async UniTask<FiringRangeGame> CreateFiringRangeGame()
+        {
+            GameStatsView gameStatsView = await InstantiateAsRegistered<GameStatsView>(_staticData.LocationData.GameStatsViewLocation);
+            FiringRangeGame firingRangeGame = new FiringRangeGame(_timer, gameStatsView,
+                TimeSpan.FromSeconds(_staticData.FiringRangeConfig.FiringRangeTime));
+            _entityContainer.RegisterEntity(firingRangeGame);
+            return firingRangeGame;
         }
 
         public void CreateDecalPlacement()

@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-namespace FiringRange.Code.XRInput
+namespace FiringRange.Code.XRPlayer
 {
     public class XRPlayer : MonoBehaviour, IFactoryEntity
     {

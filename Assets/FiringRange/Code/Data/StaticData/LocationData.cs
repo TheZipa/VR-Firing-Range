@@ -7,5 +7,6 @@ namespace FiringRange.Code.Data.StaticData
     {
         public Location PlayerSpawnLocation;
         public Location PistolSpawnLocation;
+        public Location GameStatsViewLocation;
     }
 }

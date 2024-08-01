@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace FiringRange.Code.Logic.Weapons
+namespace FiringRange.Code.Logic.Weapons.Case
 {
     [RequireComponent(typeof(Rigidbody))]
     public class WeaponCase : MonoBehaviour

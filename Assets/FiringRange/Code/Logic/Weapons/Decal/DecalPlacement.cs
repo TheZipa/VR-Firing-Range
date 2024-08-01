@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.Pool;
 
-namespace FiringRange.Code.Logic.Weapons
+namespace FiringRange.Code.Logic.Weapons.Decal
 {
     public class DecalPlacement : IFactoryEntity
     {

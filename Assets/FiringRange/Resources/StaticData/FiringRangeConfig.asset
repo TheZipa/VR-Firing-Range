@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: FiringRangeConfig
   m_EditorClassIdentifier: 
   DecalLifeTime: 10
+  FiringRangeTime: 120

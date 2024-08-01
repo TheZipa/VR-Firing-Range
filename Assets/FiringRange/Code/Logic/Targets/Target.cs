@@ -4,6 +4,7 @@ namespace FiringRange.Code.Logic.Targets
 {
     public abstract class Target : MonoBehaviour
     {
+        [SerializeField] protected AudioSource _hitAudio;
         [SerializeField] protected Hit.Hit _hitBehaviour;
 
         private void Start() => Enable();
@@ -12,6 +13,10 @@ namespace FiringRange.Code.Logic.Targets
 
         public abstract void Disable();
 
-        public virtual void TakeHit() => _hitBehaviour.TakeHit();
+        public virtual void TakeHit()
+        {
+            _hitAudio.PlayOneShot(_hitAudio.clip);
+            _hitBehaviour.TakeHit();
+        }
     }
 }

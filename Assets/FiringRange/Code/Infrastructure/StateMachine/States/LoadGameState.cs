@@ -47,6 +47,7 @@ namespace FiringRange.Code.Infrastructure.StateMachine.States
             await _gameFactory.CreateXRPlayer();
             _gameFactory.CreateDecalPlacement();
             await _gameFactory.CreatePistol();
+            await _gameFactory.CreateFiringRangeGame();
         }
 
         private void FinishLoad() => _gameStateMachine.Enter<FiringRangeState>();

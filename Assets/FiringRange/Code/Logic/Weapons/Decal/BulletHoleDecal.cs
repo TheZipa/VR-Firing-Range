@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine;
 
-namespace FiringRange.Code.Logic.Weapons
+namespace FiringRange.Code.Logic.Weapons.Decal
 {
     public class BulletHoleDecal : MonoBehaviour
     {

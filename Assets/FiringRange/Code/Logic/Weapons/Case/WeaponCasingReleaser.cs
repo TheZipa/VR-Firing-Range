@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Pool;
 
-namespace FiringRange.Code.Logic.Weapons
+namespace FiringRange.Code.Logic.Weapons.Case
 {
     public class WeaponCasingReleaser : MonoBehaviour
     {

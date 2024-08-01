@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace FiringRange.Code.XRInput
+namespace FiringRange.Code.XRPlayer
 {
     public class InputHandAnimation : MonoBehaviour
     {

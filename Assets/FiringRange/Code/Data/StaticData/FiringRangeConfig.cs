@@ -6,5 +6,6 @@ namespace FiringRange.Code.Data.StaticData
     public class FiringRangeConfig : ScriptableObject
     {
         public float DecalLifeTime;
+        public float FiringRangeTime;
     }
 }
