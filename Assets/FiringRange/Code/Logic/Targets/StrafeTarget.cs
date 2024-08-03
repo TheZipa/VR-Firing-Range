@@ -10,6 +10,7 @@ namespace FiringRange.Code.Logic.Targets
         
         public override void Enable()
         {
+            base.Enable();
             Vector3 initialPosition = transform.position;
             _strafeTween = DOTween.Sequence()
                 .Append(transform.DOMove(_strafePosition, 5f).SetEase(Ease.Linear))
@@ -19,6 +20,7 @@ namespace FiringRange.Code.Logic.Targets
 
         public override void Disable()
         {
+            base.Disable();
             _strafeTween?.Kill();
             _strafeTween = null;
         }

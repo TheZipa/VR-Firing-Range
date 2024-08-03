@@ -5,8 +5,9 @@ namespace FiringRange.Code.Services.StaticData
 {
     public class StaticData : IStaticData
     {
-        public FiringRangeConfig FiringRangeConfig { get; private set; }
+        public CommonConfig CommonConfig { get; private set; }
         public LocationData LocationData { get; private set; }
+        public TargetConfig[] TargetsConfigs { get; private set; }
 
         private readonly IStaticDataProvider _staticDataProvider;
 
@@ -18,8 +19,11 @@ namespace FiringRange.Code.Services.StaticData
 
         public void LoadStaticData()
         {
-            FiringRangeConfig = _staticDataProvider.LoadFiringRangeConfig();
+            CommonConfig = _staticDataProvider.LoadCommonConfig();
             LocationData = _staticDataProvider.LoadLocationData();
+            TargetsConfigs = _staticDataProvider.LoadTargetsConfig();
+            foreach (TargetConfig targetsConfig in TargetsConfigs)
+                targetsConfig.LocationBounds = new LocationBounds(LocationData.TargetSpawnLocation.Position, targetsConfig.TargetsPlaceBoxSize);
         }
     }
 }

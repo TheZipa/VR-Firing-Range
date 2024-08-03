@@ -1,5 +1,4 @@
-﻿using FiringRange.Code.Logic.Targets;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace FiringRange.Code.Logic.Weapons.Shoot
 {
@@ -17,7 +16,7 @@ namespace FiringRange.Code.Logic.Weapons.Shoot
             {
                 _decalPlacement.SpawnDecalAtPoint(hit.point, hit.normal, hit.transform);
                 hit.rigidbody?.AddForce(hit.normal * _hitForce * -1, ForceMode.Impulse);
-                if(hit.transform.TryGetComponent<Target>(out Target target)) target.TakeHit(); // TODO: получить таргет через сервис
+                _targetsProvider.GetTarget(hit.transform)?.TakeHit();
             }
 
             _muzzleFlash.Show();

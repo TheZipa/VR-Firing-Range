@@ -1,5 +1,6 @@
 using FiringRange.Code.Logic.Weapons.Decal;
 using FiringRange.Code.Logic.Weapons.Muzzle;
+using FiringRange.Code.Services.TargetsProvider;
 using UnityEngine;
 
 namespace FiringRange.Code.Logic.Weapons.Shoot
@@ -11,8 +12,13 @@ namespace FiringRange.Code.Logic.Weapons.Shoot
         [SerializeField] protected AudioSource _shootAudio;
 
         protected DecalPlacement _decalPlacement;
+        protected ITargetsProvider _targetsProvider;
 
-        public void Construct(DecalPlacement decalPlacement) => _decalPlacement = decalPlacement;
+        public void Construct(ITargetsProvider targetsProvider, DecalPlacement decalPlacement)
+        {
+            _targetsProvider = targetsProvider;
+            _decalPlacement = decalPlacement;
+        }
 
         public virtual void Shoot() => _shootAudio.PlayOneShot(_shootAudio.clip);
 
