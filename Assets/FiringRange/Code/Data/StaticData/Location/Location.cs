@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace FiringRange.Code.Data.StaticData
+namespace FiringRange.Code.Data.StaticData.Location
 {
     [Serializable]
     public struct Location

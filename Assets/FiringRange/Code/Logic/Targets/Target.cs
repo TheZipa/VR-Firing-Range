@@ -9,8 +9,6 @@ namespace FiringRange.Code.Logic.Targets
         [SerializeField] protected AudioSource _hitAudio;
         [SerializeField] protected Hit.Hit _hitBehaviour;
 
-        private void Start() => Enable();
-
         public virtual void Enable() => gameObject.SetActive(true);
 
         public virtual void Disable() => gameObject.SetActive(false);

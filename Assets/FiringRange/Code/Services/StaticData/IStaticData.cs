@@ -1,4 +1,5 @@
 using FiringRange.Code.Data.StaticData;
+using FiringRange.Code.Data.StaticData.Location;
 
 namespace FiringRange.Code.Services.StaticData
 {
@@ -6,7 +7,6 @@ namespace FiringRange.Code.Services.StaticData
     {
         CommonConfig CommonConfig { get; }
         LocationData LocationData { get; }
-        TargetConfig[] TargetsConfigs { get; }
         void LoadStaticData();
     }
 }

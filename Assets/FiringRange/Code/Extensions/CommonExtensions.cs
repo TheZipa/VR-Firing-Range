@@ -1,5 +1,7 @@
 using System;
 using Newtonsoft.Json;
+using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace FiringRange.Code.Extensions
 {
@@ -22,6 +24,8 @@ namespace FiringRange.Code.Extensions
             if(when) apply.Invoke(self);
             return self;
         }
+
+        public static float GetRandomInVector(this Vector2 vector) => Random.Range(vector.x, vector.y);
         
         public static T ToDeserialized<T>(this string json) => JsonConvert.DeserializeObject<T>(json);
 

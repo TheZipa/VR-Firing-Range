@@ -1,7 +1,9 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
-namespace FiringRange.Code.Data.StaticData
+namespace FiringRange.Code.Data.StaticData.Location
 {
+    [Serializable]
     public struct LocationBounds
     {
         public Vector2 XBounds;

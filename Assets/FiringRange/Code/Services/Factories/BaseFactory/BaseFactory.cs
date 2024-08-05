@@ -1,8 +1,10 @@
 using Cysharp.Threading.Tasks;
 using FiringRange.Code.Data.StaticData;
+using FiringRange.Code.Data.StaticData.Location;
 using FiringRange.Code.Services.Assets;
 using FiringRange.Code.Services.EntityContainer;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 
 namespace FiringRange.Code.Services.Factories.BaseFactory
 {
@@ -36,6 +38,9 @@ namespace FiringRange.Code.Services.Factories.BaseFactory
             return component;
         }
 
+        public async UniTask<T> Instantiate<T>(Location location, Transform parent = null) where T : Object => 
+            await Instantiate<T>(location.Position, location.Rotation, parent);
+
         public async UniTask<T> Instantiate<T>(Vector3 at, Vector3 rotation, Transform parent = null) where T : Object
         {
             GameObject instantiatedObject = await _assets.Instantiate<GameObject>(typeof(T).Name, parent);
@@ -50,9 +55,9 @@ namespace FiringRange.Code.Services.Factories.BaseFactory
             return instantiatedObject.GetComponent<T>();
         }
 
-        public async UniTask<T> Instantiate<T>(string assetKey, Transform parent = null) where T : Object
+        public async UniTask<T> Instantiate<T>(AssetReference asset, Transform parent = null) where T : Object
         {
-            GameObject instantiatedObject = await _assets.Instantiate<GameObject>(assetKey, parent);
+            GameObject instantiatedObject = await _assets.Instantiate<GameObject>(asset, parent);
             return instantiatedObject.GetComponent<T>();
         }
     }

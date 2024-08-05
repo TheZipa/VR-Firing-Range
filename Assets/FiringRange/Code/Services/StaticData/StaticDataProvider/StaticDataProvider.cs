@@ -1,4 +1,5 @@
 using FiringRange.Code.Data.StaticData;
+using FiringRange.Code.Data.StaticData.Location;
 using UnityEngine;
 
 namespace FiringRange.Code.Services.StaticData.StaticDataProvider
@@ -13,6 +14,12 @@ namespace FiringRange.Code.Services.StaticData.StaticDataProvider
 
         public LocationData LoadLocationData() => Resources.Load<LocationData>(LocationDataPath);
 
-        public TargetConfig[] LoadTargetsConfig() => Resources.LoadAll<TargetConfig>(TargetConfigsPath);
+        public T LoadTargetConfig<T>() where T : TargetConfig
+        {
+            string configPath = TargetConfigsPath + '/' + typeof(T).Name;
+            return Resources.Load<T>(configPath);
+        }
+
+        public TargetConfig[] LoadAllTargetConfigs() => Resources.LoadAll<TargetConfig>(TargetConfigsPath);
     }
 }

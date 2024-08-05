@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8098f80597a24815b4369a33c41b2177, type: 3}
-  m_Name: FiringRangeConfig
+  m_Name: CommonConfig
   m_EditorClassIdentifier: 
   DecalLifeTime: 10
   FiringRangeTime: 120

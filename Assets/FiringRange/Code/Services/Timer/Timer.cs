@@ -8,6 +8,7 @@ namespace FiringRange.Code.Services.Timer
     {
         public event Action OnTimerComplete;
         public event Action<TimeSpan> OnTimerUpdate;
+        public bool IsRunning { get; private set; }
         
         private TimeSpan _duration;
         private TimeSpan _elapsed;
@@ -21,6 +22,7 @@ namespace FiringRange.Code.Services.Timer
             _cts = new CancellationTokenSource();
             _elapsed = TimeSpan.Zero;
             _duration = duration;
+            IsRunning = true;
             RunTimerAsync(_cts.Token).Forget();
         }
 
@@ -29,16 +31,22 @@ namespace FiringRange.Code.Services.Timer
             if (!_isPaused) return;
             _isPaused = false;
             _cts = new CancellationTokenSource();
+            IsRunning = true;
             RunTimerAsync(_cts.Token).Forget();
         }
         
         public void Pause()
         {
             _isPaused = true;
+            IsRunning = false;
             Stop();
         }
 
-        public void Stop() => _cts?.Cancel();
+        public void Stop()
+        {
+            _cts?.Cancel();
+            IsRunning = false;
+        }
 
         private async UniTaskVoid RunTimerAsync(CancellationToken token)
         {

@@ -1,5 +1,7 @@
 using FiringRange.Code.Data.StaticData;
+using FiringRange.Code.Data.StaticData.Location;
 using FiringRange.Code.Services.StaticData.StaticDataProvider;
+using UnityEditor;
 
 namespace FiringRange.Code.Services.StaticData
 {
@@ -7,7 +9,6 @@ namespace FiringRange.Code.Services.StaticData
     {
         public CommonConfig CommonConfig { get; private set; }
         public LocationData LocationData { get; private set; }
-        public TargetConfig[] TargetsConfigs { get; private set; }
 
         private readonly IStaticDataProvider _staticDataProvider;
 
@@ -21,9 +22,11 @@ namespace FiringRange.Code.Services.StaticData
         {
             CommonConfig = _staticDataProvider.LoadCommonConfig();
             LocationData = _staticDataProvider.LoadLocationData();
-            TargetsConfigs = _staticDataProvider.LoadTargetsConfig();
-            foreach (TargetConfig targetsConfig in TargetsConfigs)
+            foreach (TargetConfig targetsConfig in _staticDataProvider.LoadAllTargetConfigs())
+            {
                 targetsConfig.LocationBounds = new LocationBounds(LocationData.TargetSpawnLocation.Position, targetsConfig.TargetsPlaceBoxSize);
+                EditorUtility.SetDirty(targetsConfig);
+            }
         }
     }
 }

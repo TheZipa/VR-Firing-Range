@@ -19,6 +19,9 @@ namespace FiringRange.Code.Services.Assets
         public async UniTask<T> Instantiate<T>(string address, Vector3 at, Quaternion rotation, Transform parent = null) where T : Object =>
             await Addressables.InstantiateAsync(address, at, rotation, parent).ToUniTask() as T;
 
+        public async UniTask<T> Instantiate<T>(AssetReference assetReference, Transform parent = null) where T : Object => 
+            await Addressables.InstantiateAsync(assetReference, parent).ToUniTask() as T;
+
         public async UniTask<T> LoadPersistent<T>(string address) where T : class => await Addressables.LoadAssetAsync<T>(address);
 
         public async UniTask<T> Load<T>(string address) where T : class

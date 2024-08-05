@@ -11,6 +11,12 @@ namespace FiringRange.Code.Logic.Common
         [SerializeField] private TMP_Text _pointsText;
         private const string TimeFormat = @"mm\:ss";
 
+        private void Awake()
+        {
+            UpdateTimeText(TimeSpan.Zero);
+            UpdatePointsText(0);
+        }
+
         public void UpdateTimeText(TimeSpan time) => _timerText.text = time.ToString(TimeFormat);
 
         public void UpdatePointsText(int points) => _pointsText.text = points.ToString();

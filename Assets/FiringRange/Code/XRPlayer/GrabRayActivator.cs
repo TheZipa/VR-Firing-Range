@@ -7,24 +7,17 @@ namespace FiringRange.Code.XRPlayer
     {
         [SerializeField] private GameObject _leftGrabRay;
         [SerializeField] private GameObject _rightGrabRay;
-
         [SerializeField] private XRDirectInteractor _rightDirectGrab;
         [SerializeField] private XRDirectInteractor _leftDirectGrab;
+        [SerializeField] private XRRayInteractor _leftRayInteractor;
+        [SerializeField] private XRRayInteractor _rightRayInteractor;
 
         private void Awake()
         {
-            _leftDirectGrab.selectEntered.AddListener(DisableLeftGrabRay);
-            _leftDirectGrab.selectExited.AddListener(EnableLeftGrabRay);
-            _rightDirectGrab.selectEntered.AddListener(DisableRightGrabRay);
-            _rightDirectGrab.selectExited.AddListener(EnableRightGrabRay);
+            _leftDirectGrab.selectEntered.AddListener(_ => _leftGrabRay.SetActive(false));
+            _leftDirectGrab.selectExited.AddListener(_ => _leftGrabRay.SetActive(true));
+            _rightDirectGrab.selectEntered.AddListener(_ => _rightGrabRay.SetActive(false));
+            _rightDirectGrab.selectExited.AddListener(_ => _rightGrabRay.SetActive(true));
         }
-
-        private void DisableLeftGrabRay(SelectEnterEventArgs args) => _leftGrabRay.SetActive(false);
-
-        private void DisableRightGrabRay(SelectEnterEventArgs args) => _rightGrabRay.SetActive(false);
-
-        private void EnableLeftGrabRay(SelectExitEventArgs args) => _leftGrabRay.SetActive(true);
-
-        private void EnableRightGrabRay(SelectExitEventArgs args) => _rightGrabRay.SetActive(true);
     }
 }

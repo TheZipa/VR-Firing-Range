@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2994218315973364953}
   - component: {fileID: 8859455772143129746}
   - component: {fileID: 2082173818558734351}
-  - component: {fileID: 5944940978236289429}
+  - component: {fileID: 4611648311642885696}
   - component: {fileID: 5916318031240556465}
   - component: {fileID: 838015476382019358}
   - component: {fileID: 3217379316875613337}
@@ -87,7 +87,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &5944940978236289429
+--- !u!114 &4611648311642885696
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -96,12 +96,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2886146019354990590}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88159ed78ed547e9934c88c5f25eb764, type: 3}
+  m_Script: {fileID: 11500000, guid: 84fd2f871d744359993f4179c165a658, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _hitAudio: {fileID: 3217379316875613337}
   _hitBehaviour: {fileID: 5916318031240556465}
-  _strafePosition: {x: -3.55, y: 0.52, z: -6}
 --- !u!114 &5916318031240556465
 MonoBehaviour:
   m_ObjectHideFlags: 0

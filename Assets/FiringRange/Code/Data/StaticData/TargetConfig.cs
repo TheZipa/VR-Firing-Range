@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using FiringRange.Code.Data.StaticData.Location;
+using UnityEngine;
 using UnityEngine.AddressableAssets;
 
 namespace FiringRange.Code.Data.StaticData
