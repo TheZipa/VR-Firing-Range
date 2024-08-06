@@ -27,6 +27,7 @@ namespace FiringRange.Code.Infrastructure.StateMachine.States
             CacheEntities();
             _firingRangeGame.OnEnd += FinishFiringRange;
             _startButton.OnClick.AddListener(StartOrStopFiringRange);
+            _firingRangeGame.SwitchTargetPlacement(1); //DEBUG
             _loadingCurtain.Hide();
         }
 

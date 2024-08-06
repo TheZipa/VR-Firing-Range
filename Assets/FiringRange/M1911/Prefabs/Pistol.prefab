@@ -799,7 +799,7 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
-  m_AttachTransform: {fileID: 6956446269199166638}
+  m_AttachTransform: {fileID: 0}
   m_SecondaryAttachTransform: {fileID: 0}
   m_UseDynamicAttach: 0
   m_MatchAttachPosition: 1
@@ -867,6 +867,7 @@ MonoBehaviour:
   _weaponShooter: {fileID: 1203878494055351263}
   _weaponAnimator: {fileID: 9046735323404824339}
   _weaponCasing: {fileID: 4623218738123389156}
+  _rigidbody: {fileID: 1743985967407771048}
 --- !u!1 &4414661844948288706
 GameObject:
   m_ObjectHideFlags: 0

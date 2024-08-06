@@ -9,8 +9,6 @@ namespace FiringRange.Code.XRPlayer
         [SerializeField] private GameObject _rightGrabRay;
         [SerializeField] private XRDirectInteractor _rightDirectGrab;
         [SerializeField] private XRDirectInteractor _leftDirectGrab;
-        [SerializeField] private XRRayInteractor _leftRayInteractor;
-        [SerializeField] private XRRayInteractor _rightRayInteractor;
 
         private void Awake()
         {

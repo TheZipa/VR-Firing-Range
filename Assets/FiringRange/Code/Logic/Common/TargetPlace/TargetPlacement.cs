@@ -22,7 +22,14 @@ namespace FiringRange.Code.Logic.Common.TargetPlace
             }
         }
 
-        public abstract void PlaceAll();
+        public virtual void PlaceAll()
+        {
+            foreach (Target target in _targets)
+            {
+                Replace(target);
+                target.Enable();
+            }
+        }
 
         public virtual void Disable()
         {

@@ -15,20 +15,9 @@ namespace FiringRange.Code.Logic.Common.TargetPlace
             _targetConfig = targetConfig;
         }
 
-        public override void PlaceAll()
-        {
-            foreach (Target target in _targets)
-            {
-                PlaceTarget(target);
-                target.Enable();
-            }
-        }
-
-        protected override void Replace(Target target) => PlaceTarget(target);
-
-        private void PlaceTarget(Target target) =>
+        protected override void Replace(Target target) => 
             target.transform.position = GetRandomPositionInBounds();
-
+        
         private Vector3 GetRandomPositionInBounds()
         {
             LocationBounds bounds = _targetConfig.LocationBounds;

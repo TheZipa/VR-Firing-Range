@@ -322,7 +322,7 @@ MonoBehaviour:
   m_OnSelectExited:
     m_PersistentCalls:
       m_Calls: []
-  m_SelectActionTrigger: 0
+  m_SelectActionTrigger: 1
   m_HideControllerOnSelect: 0
   m_AllowHoveredActivate: 0
   m_TargetPriorityMode: 0
@@ -387,7 +387,7 @@ MonoBehaviour:
   m_TimeToAutoDeselect: 3
   m_EnableUIInteraction: 1
   m_BlockUIOnInteractableSelection: 1
-  m_AllowAnchorControl: 1
+  m_AllowAnchorControl: 0
   m_UseForceGrab: 1
   m_RotateSpeed: 180
   m_TranslateSpeed: 1
@@ -986,7 +986,7 @@ MonoBehaviour:
   m_OnSelectExited:
     m_PersistentCalls:
       m_Calls: []
-  m_SelectActionTrigger: 0
+  m_SelectActionTrigger: 1
   m_HideControllerOnSelect: 0
   m_AllowHoveredActivate: 0
   m_TargetPriorityMode: 0
@@ -1051,7 +1051,7 @@ MonoBehaviour:
   m_TimeToAutoDeselect: 3
   m_EnableUIInteraction: 1
   m_BlockUIOnInteractableSelection: 1
-  m_AllowAnchorControl: 1
+  m_AllowAnchorControl: 0
   m_UseForceGrab: 1
   m_RotateSpeed: 180
   m_TranslateSpeed: 1
@@ -1410,8 +1410,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1611173680418018519}
   - component: {fileID: 1611173680418018536}
+  - component: {fileID: 434935775625538037}
   - component: {fileID: 820093899}
-  - component: {fileID: 820093897}
   m_Layer: 0
   m_Name: Right Hand
   m_TagString: Right Hand
@@ -1674,28 +1674,7 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 0}
   m_ButtonPressPoint: 0.5
---- !u!135 &820093899
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1611173680418018518}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &820093897
+--- !u!114 &434935775625538037
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1704,7 +1683,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1611173680418018518}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4253f32900bcc4d499d675566142ded0, type: 3}
+  m_Script: {fileID: 11500000, guid: be5ecb7bde0d4558828ed0395b5ab6d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 7093520688166843875}
@@ -1744,7 +1723,7 @@ MonoBehaviour:
   m_OnSelectExited:
     m_PersistentCalls:
       m_Calls: []
-  m_SelectActionTrigger: 0
+  m_SelectActionTrigger: 1
   m_HideControllerOnSelect: 0
   m_AllowHoveredActivate: 0
   m_TargetPriorityMode: 0
@@ -1785,6 +1764,28 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   m_PhysicsTriggerInteraction: 1
+  _anotherHandInteractor: {fileID: 5242809814201481650}
+--- !u!135 &820093899
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611173680418018518}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1611173680493496135
 GameObject:
   m_ObjectHideFlags: 0
@@ -1872,8 +1873,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1611173680716864371}
   - component: {fileID: 1611173680716864372}
+  - component: {fileID: 5242809814201481650}
   - component: {fileID: 1355780588}
-  - component: {fileID: 1355780586}
   m_Layer: 0
   m_Name: Left Hand
   m_TagString: Left Hand
@@ -2136,28 +2137,7 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 0}
   m_ButtonPressPoint: 0.5
---- !u!135 &1355780588
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1611173680716864370}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1355780586
+--- !u!114 &5242809814201481650
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2166,7 +2146,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1611173680716864370}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4253f32900bcc4d499d675566142ded0, type: 3}
+  m_Script: {fileID: 11500000, guid: be5ecb7bde0d4558828ed0395b5ab6d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 7093520688166843875}
@@ -2206,7 +2186,7 @@ MonoBehaviour:
   m_OnSelectExited:
     m_PersistentCalls:
       m_Calls: []
-  m_SelectActionTrigger: 0
+  m_SelectActionTrigger: 1
   m_HideControllerOnSelect: 0
   m_AllowHoveredActivate: 0
   m_TargetPriorityMode: 0
@@ -2247,6 +2227,28 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   m_PhysicsTriggerInteraction: 1
+  _anotherHandInteractor: {fileID: 434935775625538037}
+--- !u!135 &1355780588
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611173680716864370}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1611173681131484642
 GameObject:
   m_ObjectHideFlags: 0
@@ -2558,6 +2560,7 @@ GameObject:
   - component: {fileID: 1611173682338933862}
   - component: {fileID: 1611173682338933880}
   - component: {fileID: 1611173682338933863}
+  - component: {fileID: 4084892313829438687}
   m_Layer: 3
   m_Name: Input Handler
   m_TagString: Untagged
@@ -2610,6 +2613,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ActionAssets:
   - {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+--- !u!114 &4084892313829438687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611173682338933861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9a67132143c4151b01dfe5371f3a827, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _actionBasedControllers:
+  - {fileID: 1611173680716864372}
+  - {fileID: 1611173680418018536}
+  - {fileID: 112181475}
+  - {fileID: 409475157}
 --- !u!1 &1772499107200097479
 GameObject:
   m_ObjectHideFlags: 0
@@ -2658,10 +2678,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _leftGrabRay: {fileID: 409475152}
   _rightGrabRay: {fileID: 112181470}
-  _rightDirectGrab: {fileID: 820093897}
-  _leftDirectGrab: {fileID: 1355780586}
-  _leftRayInteractor: {fileID: 409475156}
-  _rightRayInteractor: {fileID: 112181474}
+  _rightDirectGrab: {fileID: 434935775625538037}
+  _leftDirectGrab: {fileID: 5242809814201481650}
 --- !u!1 &5050725697084919110
 GameObject:
   m_ObjectHideFlags: 0
@@ -2674,7 +2692,7 @@ GameObject:
   - component: {fileID: 2521454103080334744}
   m_Layer: 0
   m_Name: Left Hand Poke Interactor
-  m_TagString: Untagged
+  m_TagString: Left Hand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2773,7 +2791,7 @@ GameObject:
   - component: {fileID: 1560645294027762459}
   m_Layer: 0
   m_Name: Right Hand Poke Interactor
-  m_TagString: Untagged
+  m_TagString: Right Hand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
